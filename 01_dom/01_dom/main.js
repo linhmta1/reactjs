@@ -1,11 +1,10 @@
-function inputHandler(evt){
-	showData(evt.data)
+const inputFn= document.querySelector('#fullname');
+const showData= document.querySelector('#showData');
+
+console.log(inputFn);
+function handlerInput(evt){
+    console.log(evt.target.value);
+    showData.innerText=evt.target.value;
 }
-function showData(text)  {
-	var showData = document.getElementById("showData");
-	if (text == null) {
-		showData.innerHTML = showData.innerHTML.slice(0, -1) ;
-	} else{
-		showData.innerHTML = showData.innerHTML + text;
-	}
-}
+
+inputFn.addEventListener('input', handlerInput);
