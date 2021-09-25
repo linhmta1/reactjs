@@ -24,16 +24,22 @@ const Button = ({
         {loading && loadingPos === "right" && <IconLoading />}
       </>
     );
+    const innerProps={
+        className: classes,
+        type : htmlType,
+        size : size,
+        ...restProps,
+    }
     if (as === 'a') {
         return(
-            <a className={classes} type={htmlType} size={size}   {...restProps}>
+            <a {...innerProps} >
                 {content}
             </a>
         )
     }
   
     return(
-        <button className={classes} type={htmlType} size={size}  {...restProps}>
+        <button  {...innerProps}>
             {content}
         </button>
     )
