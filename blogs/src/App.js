@@ -6,6 +6,7 @@ import DemoTitle from './demo/DemoTitle';
 function App() {
   return (
     <div className="wrapper-content">
+      <DemoButtonComp/>
       <DemoTitle/>
       <Header/>
       <Homepage/>
