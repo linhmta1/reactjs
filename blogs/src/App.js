@@ -3,12 +3,15 @@ import Homepage from './pages/Hompage';
 import Footer from './components/Footer';
 import DemoButtonComp from './demo/DemoButtonComp';
 import DemoTitle from './demo/DemoTitle';
+import DemoInput from './demo/DemoInput';
 function App() {
   return (
     <div className="wrapper-content">
+
+      <Header/>
       <DemoButtonComp/>
       <DemoTitle/>
-      <Header/>
+      <DemoInput/>
       <Homepage/>
       <div className="spacing"></div>
       <Footer/> 
