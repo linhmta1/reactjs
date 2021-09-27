@@ -4,15 +4,18 @@ import Footer from './components/Footer';
 import DemoButtonComp from './demo/DemoButtonComp';
 import DemoTitle from './demo/DemoTitle';
 import DemoInput from './demo/DemoInput';
+import DemoArticleItems from './demo/DemoArticleItems';
 function App() {
   return (
     <div className="wrapper-content">
 
       <Header/>
-      <DemoButtonComp/>
+      {/* <DemoButtonComp/>
       <DemoTitle/>
-      <DemoInput/>
-      <Homepage/>
+      <DemoInput/> */}
+      <DemoArticleItems/>
+
+      {/* <Homepage/> */}
       <div className="spacing"></div>
       <Footer/> 
     </div>

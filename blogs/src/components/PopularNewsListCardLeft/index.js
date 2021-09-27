@@ -1,5 +1,5 @@
-import ArticleItemThumbnail from '../ArticleItemThumbnail';
-import ArticleItemContent from '../ArticleItemContent';
+import ArticleItemThumbnail from '../ArticleItem/ArticleItemThumbnail';
+import ArticleItemContent from '../ArticleItem/ArticleItemContent';
 const PopularNewsListCardLeft = () => {
     return (
         <div className="popular-news__list--card">
