@@ -6,7 +6,7 @@ const BudgetExpenses = ({totalExpenses, totalIncome}) =>{
             <div className="budget__expenses--text">Expenses</div>
             <div className="right clearfix">
             <div className="budget__expenses--value">{(totalExpenses > 0) ? "+" : "" }  {totalExpenses}</div>
-            <div className="budget__expenses--percentage"> {totalExpenses !== 0 ? Math.round(totalIncome/totalExpenses * 100) : 0 }%</div>
+            <div className="budget__expenses--percentage"> {totalExpenses !== 0 ? Math.round(totalExpenses/totalIncome * -100) : 0 }%</div>
             </div>
         </div>
     )
