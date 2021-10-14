@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import {useDispatch} from 'react-redux'
 import cls from 'classnames'
 import {actADDIncomById} from '../store/action';
+
 const AddContainer = ({
     type= 'add',
 }) =>{
@@ -12,7 +13,6 @@ const AddContainer = ({
         'description' : '', 
         'amount' : '' ,
     });
-
     const addTypeCls = cls('add__type',{
         'red-focus' : type === 'sub',
     });
@@ -22,7 +22,6 @@ const AddContainer = ({
     const addValueCls = cls('add__value',{
         'red-focus' : type === 'sub',
     });
-    
     const handleChange= (event)=> {
         let { name, value} = event.target;
         if (name === 'amount' && value !== ''){
@@ -33,13 +32,11 @@ const AddContainer = ({
         }
         setFormData((formData) => ({ ...formData, [name]: value}))
     }
-
     const handleKeyUp = (event) =>{
         if (event.code === 'Enter') {
             handleSubmit();
         }
     }
-
     const handleSubmit = () => {
         if(!formData.amount || !formData.description){
             return
@@ -52,7 +49,6 @@ const AddContainer = ({
         })
         descriptionRef.current.focus()
     }
-
     return (
         <div className="add">
             <div className="add__container">
@@ -63,7 +59,6 @@ const AddContainer = ({
             <input ref={descriptionRef} type="text" value= {formData.description}  className={addDescriptionCls} placeholder="Add description" name = 'description'  onChange={handleChange}/>
             <input type="number" value= {formData.amount}   className={addValueCls} placeholder="Value" onChange={handleChange} name = 'amount'  onKeyUp={handleKeyUp} />
             <button className={formData.sign === 'sub'? "add__btn red" : "add__btn"  } onClick={handleSubmit}><i className="ion-ios-checkmark-outline" /> </button>
-
             </div>
         </div>
     )
