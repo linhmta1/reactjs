@@ -5,10 +5,10 @@ import BudgetTop from './components/BudgetTop';
 function App() {
   return (
     <div className="App">
-      <AddContainer />
-      <BudgetTop />
+      <AddContainer/>
+      <BudgetTop/>
       <div className="bottom">
-        <AddContainer />
+        <AddContainer/>
       </div>
       <ItemList/> 
     </div>

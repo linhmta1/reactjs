@@ -1,0 +1,36 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\linhnv\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add 01_dom 02_dice_html 03_blogs_html 04_async blogs budget_app_html budget_app_reactjs dastone-v2.0
+
+PATH: 
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\linhnv\bin;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\VanDyke Software\Clients;C:\Program Files (x86)\NetSarang\Xlpd 6;C:\Program Files (x86)\NetSarang\Xmanager 6;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\Bitvise SSH Client;C:\Program Files\PuTTY;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs;C:\Program Files\OpenJDK\openjdk-8u292-b10\bin;C:\Program Files\Java\jdk1.8.0_211\bin;C:\Program Files\Git\cmd;C:\Users\linhnv\AppData\Local\Microsoft\WindowsApps;C:\Users\linhnv\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files (x86)\Java\jre7\bin;C:\Users\linhnv\AppData\Roaming\npm;C:\Users\linhnv\AppData\Local\Android\Sdk\platform-tools
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  16.4.2
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/01_dom: Not found
+      at Request.params.callback [as _callback] (C:\Users\linhnv\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66988:18)
+      at Request.self.callback (C:\Users\linhnv\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140662:22)
+      at Request.emit (node:events:394:28)
+      at Request.<anonymous> (C:\Users\linhnv\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141634:10)
+      at Request.emit (node:events:394:28)
+      at IncomingMessage.<anonymous> (C:\Users\linhnv\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141556:12)
+      at Object.onceWrapper (node:events:513:28)
+      at IncomingMessage.emit (node:events:406:35)
+      at endReadableNT (node:internal/streams/readable:1329:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

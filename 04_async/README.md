@@ -1,3 +1,27 @@
+# redux
+ - store
+ - reducer
+ - action 
+ - state
+
+# create Store
+import { createStore, applyMiddleware } from 'redux';
+const store = createStore(
+    reducer,
+    applyMiddleware(thunk)
+);
+# reducer: phải được tạo trước 
+- có 2 tham số của
+    state, action
+function reducer(state=initState,action){
+    console.log('reducer run ',action);
+    return state
+}
+
+
+# Theme use 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

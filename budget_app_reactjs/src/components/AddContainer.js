@@ -25,7 +25,7 @@ const AddContainer = ({
     const handleChange= (event)=> {
         let { name, value} = event.target;
         if (name === 'amount' && value !== ''){
-            value= Number(value)
+            value = Number(value)
             if(value <0){
                 return
             }
