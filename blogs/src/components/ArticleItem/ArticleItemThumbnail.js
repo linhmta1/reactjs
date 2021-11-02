@@ -1,4 +1,4 @@
-const ArticleItemThumbnail = () =>{
+const ArticleItemThumbnail = (data) =>{
     return (
         <div className="article-item__thumbnail">
             <a href="/#">

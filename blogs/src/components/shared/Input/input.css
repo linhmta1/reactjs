@@ -66,3 +66,9 @@
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex; } }
+.form-control-error{
+  color: red
+}
+.form-control-input{
+  position: relative;
+}

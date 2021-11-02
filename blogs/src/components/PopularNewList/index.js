@@ -3,7 +3,10 @@ import './button.css';
 import './post-detail.css'
 import PopularNewsListCardLeft from '../PopularNewsListCardLeft';
 import PopularNewsListCardRight from '../PopularNewsListCardRight';
+import { useSelector } from 'react-redux';
 const PopularNewSection =() => {
+    const PopularList = useSelector(state=>state.Post.articlesPopular);
+    // console.log(Categories);
     return (
         <div className="popular-news section bg-white-blue">
             <div className="tcl-container">
@@ -16,17 +19,25 @@ const PopularNewSection =() => {
                 <div className="popular-news__list spacing">
                     <div className="popular-news__list--left">
                         <div className="popular-news__list--row">
-                            {/* Popular news card */}
-                            <PopularNewsListCardLeft/>
-                            <PopularNewsListCardLeft/>
-                            {/* End Popular news card */}
+                            {
+                                PopularList && PopularList.length >0 && (
+                                    <PopularNewsListCardLeft  Popular={PopularList[0]}/>
+                                )
+                            }
+                            {
+                                PopularList && PopularList.length >1 && (
+                                    <PopularNewsListCardLeft  Popular={PopularList[1]}/>
+                                )
+                            }
                         </div>
                     </div>
                     <div className="popular-news__list--right">
                         <div className="popular-news__list--row">
-                            {/* Popular news card */}
-                            <PopularNewsListCardRight/>
-                            {/* End Popular news card */}
+                            {
+                                PopularList && PopularList.length >2 && (
+                                    <PopularNewsListCardRight  Popular={PopularList[2]}/>
+                                )
+                            }
                         </div>
                     </div>
                 </div>

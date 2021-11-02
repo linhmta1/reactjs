@@ -8,6 +8,7 @@ const Input = ({
     title,
     iconPos= 'left',
     icon = <IconSearch/>,
+    error,
     ...restProps
 })=>{
     const [localType,setLocalType] = useState(type);
@@ -35,8 +36,12 @@ const Input = ({
     return(
         <div className="form-control">
             {title && <label>{title}</label> }
-            {type ==='password' && <i className={classNames} onClick={()=>handleLocaltype()}></i>}
-            <input type={localType}  {...restProps}/>
+            <div className="form-control-input">
+                {type ==='password' && <i className={classNames} onClick={()=>handleLocaltype()}></i>}
+                <input type={localType}  {...restProps}/>
+            </div>
+            {error && <span className='form-control-error'>{error}</span>}
+
         </div>
     )
 }

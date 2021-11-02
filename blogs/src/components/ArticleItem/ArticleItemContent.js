@@ -4,10 +4,10 @@ import ArticleItemStats from "./ArticleItemStats";
 import ArticleItemTitle from "./ArticleItemTitle";
 import ArticleItemDesc from "./ArticleItemDesc";
 import ArticleItemInfo from "./ArticleItemInfo";
-const ArticleItemContent = () => {
+const ArticleItemContent = (props) => {
     return (
         <div className="article-item__content">
-            <ArticleItemCategory/>
+            <ArticleItemCategory categoryIds={props.data} />
             <ArticleItemStats/>
             <ArticleItemTitle/>
             <ArticleItemDesc/>
