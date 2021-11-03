@@ -14,10 +14,11 @@ export function actGetUserMe(userCurrentInfo){
 }
 
 //Action async
-export function actGetUserMeAsync(){
+export function actGetUserMeAsync(token){
     return  async(dispatch)=>{
+        console.log(token);
         try {
-            const response = await userService.getUserMe();
+            const response = await userService.getUserMe(token);
             dispatch(actGetUserMe(response.data));
         } catch (error) {
         }

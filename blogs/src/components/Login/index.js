@@ -13,8 +13,6 @@ import { useSelector } from 'react-redux';
 const Login = () => {
     const CurrentUser = useSelector(state=>state.Auth);
     const CurrentInfo = localStorage.getItem('CurrentInfo') ?  localStorage.getItem('CurrentInfo') : '';
-
-    console.log(CurrentInfo);
     const dispatch = useDispatch();
     const [formData, setFormData] = useState({
         username: {
@@ -60,16 +58,14 @@ const Login = () => {
     }
 
     function handleSubmit(e){
+        console.log("dsfà")
         e.preventDefault()
         const isValid = checkFormIsValid();
-        if (!isValid){
-            console.log("dsfsàdsa");
+        if (isValid){
+            dispatch(actPostTokenAsync(formData.username.value,formData.password.value)) ;
         }
-        dispatch(actPostTokenAsync(formData.username.value,formData.password.value)) ;
-        dispatch(actGetUserMeAsync()) ;
-
-
     }
+
     return (
         <main className="login">
         <div className="spacing" />
@@ -81,7 +77,7 @@ const Login = () => {
                 <form autoComplete="off" onSubmit={handleSubmit}>
                      <ButtonAnt type="primary">tests</ButtonAnt>
                     <div className="form-control">
-                    <label htmlFor>Username</label>
+                    <label >Username</label>
                     {/* <input type="text" placeholder="Enter Username ..." /> */}
                     <Input 
                         type="text" 
@@ -108,7 +104,7 @@ const Login = () => {
                     {CurrentUser.errorLogin && <span className='form-control-error'>{CurrentUser.errorLogin}</span>}
 
                     <div className="d-flex tcl-jc-between tcl-ais-center">
-                    <Button type="primary" size="large"> Submit</Button>
+                    <Button type="primary" size="large" loading={CurrentUser.isLoading} loadingPos = "right"> Submit</Button>
                     <Link to="/register">Regiter</Link>
                     </div>
                 </form>
