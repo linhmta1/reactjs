@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+}
+
+.trigger {
+  margin-left: 16px;
+  margin-right: 16px;
+  align-self: center;
+}
+.menu{
+  box-shadow: #e4ecef;
+  position: relative;
+}
+  .menu .ant-menu-horizontal {
+    border: none;
+  }
+  .menu .ant-menu-submenu {
+    float: right;
+  }
+  .menu .ant-menu-submenu-title {
+    width: 64px;
+    height: 64px;
+    text-align: center;
+    padding-top: 8px;
+  }
+
+
+.menu-logo {
+  background-image: url("../../assets/images/Logo2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 53px;
+  background-size: 50%;
+  margin: 7px;
+  color: #ffffff;
+}

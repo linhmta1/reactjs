@@ -8,6 +8,8 @@ import DemoArticleItems from './demo/DemoArticleItems';
 import Login from './components/Login';
 import Registerpage from './pages/Registerpage';
 import { useDispatch } from 'react-redux';
+import { Routes ,Route } from 'react-router-dom';
+
 import {
   BrowserRouter ,
   Switch,
@@ -27,7 +29,7 @@ function App() {
       <BrowserRouter>
         <div className="wrapper-content">
           <Header/>
-          <Switch>
+          <Routes>
             <Route path="/login">
               <Login />
             </Route>
@@ -40,7 +42,7 @@ function App() {
             <Route path="/">
               <Homepage />
             </Route>
-          </Switch>
+          </Routes>
           <div className="spacing"></div>
           <Footer/> 
         </div>
