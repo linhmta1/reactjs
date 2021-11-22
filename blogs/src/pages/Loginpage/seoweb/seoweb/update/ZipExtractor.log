@@ -1,0 +1,142 @@
+Tuesday, November 16, 2021 3:15:07 PM
+
+ZipExtractor started with following command line arguments.
+[0] D:\seoweb\update\ZipExtractor.exe
+[1] update\updateseoweb.zip
+[2] D:\seoweb
+[3] D:\seoweb\SEO WEBSITE.exe
+
+Waiting for application process to exit...
+BackgroundWorker started successfully.
+Found total of 32 files and folders inside the zip file.
+Extracting Newtonsoft.Json.dll [3%]
+Extracting Newtonsoft.Json.xml [6%]
+Extracting Securityapp.exe [9%]
+Extracting SEO WEBSITE.exe [12%]
+Extracting SEO WEBSITE.exe.config [15%]
+Extracting SEO WEBSITE.pdb [18%]
+Extracting SQLite.Interop.dll [21%]
+Extracting System.Data.SQLite.dll [25%]
+Extracting useragent.txt [28%]
+Extracting WebDriver.dll [31%]
+Extracting WebDriver.xml [34%]
+Extracting xNet.dll [37%]
+Extracting Extention/ [40%]
+Extracting Extention/audiofingerprint.crx [43%]
+Extracting Extention/canvasfingerprint.crx [46%]
+Extracting Extention/clientfingerprint.crx [50%]
+Extracting Extention/fingerprint.crx [53%]
+Extracting Extention/fingerprint.zip [56%]
+Extracting Extention/fingerprintz.zip [59%]
+Extracting Extention/fontfingerprint.crx [62%]
+Extracting Extention/Proxy Auto Auth.crx [65%]
+Extracting Extention/tmproxy.crx [68%]
+Extracting Extention/webglfigerprint.crx [71%]
+Extracting Extention/webrtc.crx [75%]
+Extracting AdapterLibraryMRD.dll [78%]
+Extracting AUTO RESTART MMO TOOL.exe [81%]
+Extracting AutoUpdater.NET.dll [84%]
+Extracting AutoUpdater.NET.pdb [87%]
+Extracting AutoUpdater.NET.xml [90%]
+Extracting ErrorLog.txt [93%]
+Extracting Extention.pem [96%]
+Extracting ip.txt [100%]
+Successfully launched the updated application.
+
+
+Tuesday, November 16, 2021 9:14:47 PM
+
+ZipExtractor started with following command line arguments.
+[0] D:\seoweb\update\ZipExtractor.exe
+[1] update\updateseoweb.zip
+[2] D:\seoweb
+[3] D:\seoweb\SEO WEBSITE.exe
+
+BackgroundWorker started successfully.
+Found total of 19 files and folders inside the zip file.
+Extracting SEO WEBSITE.exe [5%]
+Extracting SEO WEBSITE.exe.config [10%]
+Extracting SEO WEBSITE.pdb [15%]
+Extracting SQLite.Interop.dll [21%]
+Extracting System.Data.SQLite.dll [26%]
+Extracting useragent.txt [31%]
+Extracting WebDriver.dll [36%]
+Extracting WebDriver.xml [42%]
+Extracting xNet.dll [47%]
+Extracting AdapterLibraryMRD.dll [52%]
+Extracting AutoUpdater.NET.dll [57%]
+Extracting AutoUpdater.NET.pdb [63%]
+Extracting AutoUpdater.NET.xml [68%]
+Extracting ErrorLog.txt [73%]
+Extracting Extention.pem [78%]
+Extracting ip.txt [84%]
+Extracting Newtonsoft.Json.dll [89%]
+Extracting Newtonsoft.Json.xml [94%]
+Extracting Securityapp.exe [100%]
+Successfully launched the updated application.
+
+
+Wednesday, November 17, 2021 1:18:11 PM
+
+ZipExtractor started with following command line arguments.
+[0] D:\seoweb\update\ZipExtractor.exe
+[1] update\updateseoweb.zip
+[2] D:\seoweb
+[3] D:\seoweb\SEO WEBSITE.exe
+[4] -profile 0
+
+BackgroundWorker started successfully.
+Found total of 19 files and folders inside the zip file.
+Extracting SEO WEBSITE.exe [5%]
+Extracting SEO WEBSITE.exe.config [10%]
+Extracting SEO WEBSITE.pdb [15%]
+Extracting SQLite.Interop.dll [21%]
+Extracting System.Data.SQLite.dll [26%]
+Extracting useragent.txt [31%]
+Extracting WebDriver.dll [36%]
+Extracting WebDriver.xml [42%]
+Extracting xNet.dll [47%]
+Extracting AdapterLibraryMRD.dll [52%]
+Extracting AutoUpdater.NET.dll [57%]
+Extracting AutoUpdater.NET.pdb [63%]
+Extracting AutoUpdater.NET.xml [68%]
+Extracting ErrorLog.txt [73%]
+Extracting Extention.pem [78%]
+Extracting ip.txt [84%]
+Extracting Newtonsoft.Json.dll [89%]
+Extracting Newtonsoft.Json.xml [94%]
+Extracting Securityapp.exe [100%]
+Successfully launched the updated application.
+
+
+Friday, November 19, 2021 8:12:38 AM
+
+ZipExtractor started with following command line arguments.
+[0] D:\seoweb\update\ZipExtractor.exe
+[1] update\updateseoweb.zip
+[2] D:\seoweb
+[3] D:\seoweb\SEO WEBSITE.exe
+
+BackgroundWorker started successfully.
+Found total of 18 files and folders inside the zip file.
+Extracting Newtonsoft.Json.dll [5%]
+Extracting Newtonsoft.Json.xml [11%]
+Extracting SEO WEBSITE.exe [16%]
+Extracting SEO WEBSITE.exe.config [22%]
+Extracting SEO WEBSITE.pdb [27%]
+Extracting SQLite.Interop.dll [33%]
+Extracting System.Data.SQLite.dll [38%]
+Extracting useragent.txt [44%]
+Extracting WebDriver.dll [50%]
+Extracting WebDriver.xml [55%]
+Extracting xNet.dll [61%]
+Extracting AdapterLibraryMRD.dll [66%]
+Extracting AutoUpdater.NET.dll [72%]
+Extracting AutoUpdater.NET.pdb [77%]
+Extracting AutoUpdater.NET.xml [83%]
+Extracting ErrorLog.txt [88%]
+Extracting Extention.pem [94%]
+Extracting ip.txt [100%]
+Successfully launched the updated application.
+
+

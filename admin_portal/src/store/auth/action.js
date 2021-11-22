@@ -44,7 +44,7 @@ export function actFetchMeAsync(token){
 export function actLoginAsync(username,password){
     return async(dispatch)=>{
             try {
-                console.log("dfấdfá")
+                console.log("111111")
                 //dispatch(actAuthLoading());
                 const response = await authService.login(username,password);
                 const token = response.data.token

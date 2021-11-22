@@ -18,7 +18,6 @@ import { getUsernameAvatar } from '../../components/UserAvatar';
 const { Header } = Layout;
 const { SubMenu } = Menu;
 
-
 function LayoutBanner({ collapsed, handleOnCollapse }) {
   const getCollapseIcon = () => {
     if (collapsed) {
@@ -47,7 +46,6 @@ function LayoutBanner({ collapsed, handleOnCollapse }) {
         {window.innerWidth > 992 && getCollapseIcon()}
       </div>
     
-
       <Menu
         onClick={handleLanguageMenuClick}
         mode="horizontal"
