@@ -1,5 +1,6 @@
 import "./login.css";
 import { useState } from "react";
+import { useSelector} from "react-redux";
 import { useDispatch } from "react-redux";
 import { actLoginAsync } from "../../store/auth/action";
 import { useHistory } from "react-router-dom";
@@ -7,30 +8,39 @@ import { Row, Col } from "antd";
 import { Form, Input, Button, Checkbox } from 'antd';
 import { UserOutlined,  LockOutlined } from "@ant-design/icons";
 import RightLogin from './rightLogin'
-
+import { useEffect } from "react";
 const LoginPage = () => {
   const history = useHistory();
+  const isAuthenticated = useSelector(state => Boolean(state.Auth.token));
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
-  const [formErr, setFormErr] = useState("");  
+  const [Err, setErr] = useState("");  
   
-  console.log(formErr)
+  useEffect(()=> {
+    if(isAuthenticated){
+      history.push('/')
+    }
+  },[isAuthenticated])
+
+  console.log(Err)
   const onFinish = (values) => {
-    console.log("Success:", values.username);
+    if (!loading){
       setLoading(true);
-      setFormErr("");
-      console.log("sdfsấdf");
+      setErr("");
       dispatch(
         actLoginAsync(values.username, values.password)
       ).then((res) => {
         if (res.ok) {
           history.push("/");
         } else {
-          console.log("Error", res.error);
-          setFormErr(res.error);
+          setErr(res.error);
         }
         setLoading(false);
       });
+    } else{
+      console.log("dsfáda")
+    }
+      
   };
 
   const onFinishFailed = (errorInfo) => {
@@ -48,8 +58,7 @@ const LoginPage = () => {
                   <Col xs={24} sm={24} md={20} lg={12} xl={8}>
                     <h1>Sign In</h1>
                     <p>
-                      Don't have an account yet?
-                      <a href="/auth/register-2">Sign Up</a>
+                      {Err}
                     </p>
 
                     <div className="mt-4">
@@ -117,8 +126,8 @@ const LoginPage = () => {
                           }}
                         >
                           <Button type="primary" htmlType="submit">
-                            Submit
-                          </Button>
+                            {loading ? 'Loading ...' : 'Submit'}
+                        </Button>                 
                         </Form.Item>
                       </Form>
                     </div>

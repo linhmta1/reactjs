@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux'
 import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
@@ -10,15 +11,18 @@ import {
   DownOutlined
 } from '@ant-design/icons';
 import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
-
 import { Layout, Menu, Badge } from 'antd';
 import './Style.css';
 import { getUsernameAvatar } from '../../components/UserAvatar';
-
+import { actLogout } from '../../store/auth/action';
+import { useDispatch } from 'react-redux';
 const { Header } = Layout;
 const { SubMenu } = Menu;
 
 function LayoutBanner({ collapsed, handleOnCollapse }) {
+  const dispatch = useDispatch();
+  const currentUser = useSelector((state) => state.Auth.currentUser);
+  console.log(currentUser)
   const getCollapseIcon = () => {
     if (collapsed) {
       return (
@@ -30,7 +34,10 @@ function LayoutBanner({ collapsed, handleOnCollapse }) {
 
   const handleLanguageMenuClick = () => {};
   const handleSettingMenuClick = () => {};
-  const handleLogout = () => {};
+  const handleLogout = () => {
+    console.log("dsfsads");
+    dispatch(actLogout());
+  };
 
 
   return (
@@ -87,17 +94,17 @@ function LayoutBanner({ collapsed, handleOnCollapse }) {
         </SubMenu>
       </Menu>
 
-      <Menu onClick={handleSettingMenuClick} mode="horizontal" className="menu">
-        <SubMenu title={getUsernameAvatar('Linhnv')}>
+      <Menu onClick={handleSettingMenuClick} mode="horizontal" className="menu">         
+          <SubMenu title= {currentUser ?  getUsernameAvatar(currentUser.userName) :   getUsernameAvatar('') }>
           <Menu.Item key="setting:1">
             <span>
               <UserOutlined />
               Profile
             </span>
           </Menu.Item>
-          <Menu.Item key="setting:2">
+          <Menu.Item key="setting:2" onClick={handleLogout}>
             <span>
-              <LogoutOutlined onClick={handleLogout} />
+              <LogoutOutlined  />
               Logout
             </span>
           </Menu.Item>

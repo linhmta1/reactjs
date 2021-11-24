@@ -1,8 +1,10 @@
+import { useHistory } from "react-router-dom";
 import authService from '../../services/auth';
 import { mappingCurentUser } from '../../helpers'
 import { ACCESS_TOKEN } from '../../constants';
 // Action types 
 export const ACT_LOGIN_SUCCESS = 'ACT_LOGIN_SUCCESS'
+export const ACT_LOGOUT = 'ACT_LOGOUT'
 
 //Action Creator
 export function actLoginSuccess({user, token}){
@@ -15,8 +17,14 @@ export function actLoginSuccess({user, token}){
     }
 }
 
+export function actLogout(){
+    return{
+        type: ACT_LOGOUT,
+    }
+}
+
 //Action async
-export function actFetchMeAsync(token){
+export function actFetchMeAsync (token){
     return async dispatch=>{
         if (token === undefined){
             token = localStorage.getItem(ACCESS_TOKEN)
@@ -25,13 +33,13 @@ export function actFetchMeAsync(token){
             const response = await authService.fetchMe(token)
             
             const user = mappingCurentUser(response.data)
-            // console.log(user,token);
             dispatch(actLoginSuccess({user, token}))
             return {
                 ok: true,
                 error: ''
             }
         }catch(err){
+            dispatch(actLogout())
             return {
                 ok: false,
                 error: 'Username or Password is not correct'
